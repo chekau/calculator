@@ -1,0 +1,31 @@
+.calc_btn {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+    margin-top: 5px;
+    margin-right: 5px;
+
+}
+
+.digits {
+    margin-bottom: 5px;
+
+
+}
+
+
+.calc_btn:hover {
+    background-color: lightgray;
+
+}
+
+.digits_row {
+    display: flex;
+}

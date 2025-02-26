@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <script>
+        let number = "";
+        let answer = 0
+        let operation = ""
+        
+        function save_digit(digit) {
+            number += digit;
+        }
+        function print_number() {
+            alert(number)
+        }
+        
+        function clear_number() {
+            number = 0;
+            answer = 0
+        }
+        
+        function plus() {
+            answer += number;
+            number = 0;
+
+        }
+
+        function print_answer() {
+            if (operation == "+") {
+                plus()
+            }
+            alert(answer)
+        }
+
+    </script>
+
+    
+    <div class="calc_btn" onclick="print_number()">Число</div>
+    <div class="calc_btn" onclick="clear_number()">C</div>
+    <div class="calc_btn" onclick="plus()">+</div>
+    <div class="calc_btn" onclick="print_answer()">=</div>
+
+    <div class="digits">
+        <div class="digits_row">
+            <div class="calc_btn"onclick="save_digit(1)">1</div>
+            <div class="calc_btn"onclick="save_digit(2)">2</div>
+            <div class="calc_btn"onclick="save_digit(3)">3</div>
+        </div>
+
+        <div class="digits_row">
+            <div class="calc_btn"onclick="save_digit(4)">4</div>
+            <div class="calc_btn"onclick="save_digit(5)">5</div>
+            <div class="calc_btn"onclick="save_digit(6)">6</div>
+        </div>
+
+        <div class="digits_row">
+            <div class="calc_btn"onclick="save_digit(7)">7</div>
+            <div class="calc_btn"onclick="save_digit(8)">8</div>
+            <div class="calc_btn"onclick="save_digit(9)">9</div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
